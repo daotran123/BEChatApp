@@ -223,7 +223,7 @@ exports.forgotPassword = async (req, res, next) => {
     await userDoc.save({ validateBeforeSave: false });
 
     try {
-        const resetURL = `http://localhost:3000/auth/new-password/?token=${resetToken}`;
+        const resetURL = `https://footstepfe.web.app/auth/new-password/?token=${resetToken}`;
         console.log(resetURL);
 
         //TODO => Send Email With Reset URL
